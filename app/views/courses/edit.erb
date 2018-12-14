@@ -1,0 +1,14 @@
+<body>
+  <h1>You will be editing <%= @course.name %> </h1>
+
+  <form action="/courses/<%= @course.id %>" method="POST">
+    <input name="course[name]" value="<%=@course.name %>">
+    <input name="course[professor]" value="<%=@course.professor %>">
+    <input name="course[credits]" value="<%=@course.credits %>">
+    <input type="hidden" name="_method" value="PUT">
+    <input type="submit">
+  </form>
+
+
+
+</body>
